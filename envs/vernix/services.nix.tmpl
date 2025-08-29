@@ -13,6 +13,7 @@
       layout = "us";
     };
   };
+  services.jellyfin.enable = true;
   services.deluge = {
     web = {
       openFirewall = true;
@@ -88,7 +89,7 @@
           proxy = {
               anonymous_mode = true;
               force_proxy = true;
-              hostname = "ee-tll-wg-socks5-001.relays.mullvad.net";
+              hostname = "ca-mtr-wg-socks5-004.relays.mullvad.net";
               password = "";
               port = 1080;
               proxy_hostnames = true;
