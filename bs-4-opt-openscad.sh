@@ -17,7 +17,7 @@ mkdir -p ~/.local/share/OpenSCAD/libraries
 
 # Define OpenSCAD repositories to clone
 declare -A scad_repos=(
-    ["scadlib"]="matt-fff/scadlib"
+    ["scadlib"]="shivros/scadlib"
     ["BOSL2"]="BelfrySCAD/BOSL2"
     ["cc-scad"]="codefold/cc-scad"
     ["constructive"]="solidboredom/constructive"

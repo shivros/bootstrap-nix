@@ -3,10 +3,10 @@
 ## Grab the script
 
 ```
-mkdir -p ~/Workspaces/matt-fff/
-cd ~/Workspaces/matt-fff
+mkdir -p ~/Workspaces/shivros/
+cd ~/Workspaces/shivros
 nix-shell -p git
-git clone https://github.com/matt-fff/bootstrap-nix
+git clone https://github.com/shivros/bootstrap-nix
 cd bootstrap-nix
 ```
 
@@ -79,7 +79,7 @@ login <email>
 Add the sync. It needs the full path
 
 ```
-sync /home/matt/MEGA/ /
+sync /home/shiv/MEGA/ /
 ```
 
 ### Dropbox
@@ -117,5 +117,5 @@ keyword.enabled
 #### crontabs
 
 ```
-*/5 * * * * /home/matt/.local/bin/auto-commit >> /dev/null 2>&1
+*/5 * * * * /home/shiv/.local/bin/auto-commit >> /dev/null 2>&1
 ```

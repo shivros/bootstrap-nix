@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 # User
-export NIXUSER="${NIXUSER:-matt}"
+export NIXUSER="${NIXUSER:-shiv}"
 
 # Hostname
 export HOSTNAME="${HOSTNAME:-newnix}"

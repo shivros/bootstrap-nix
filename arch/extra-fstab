@@ -1,3 +1,3 @@
-//nas1/Library /mnt/nas/Library cifs ,cache=loose,credentials=/home/matt/.smbcredentials,vers=3.0,uid=1000,gid=1000,file_mode=0777,dir_mode=0777,nofail 0 0
-//nas2/Projects /mnt/nas/Projects cifs ,cache=loose,credentials=/home/matt/.smbcredentials,vers=3.0,uid=1000,gid=1000,file_mode=0777,dir_mode=0777,nofail 0 0
-//nas1/Resources /mnt/nas/Resources cifs ,cache=loose,credentials=/home/matt/.smbcredentials,vers=3.0,uid=1000,gid=1000,file_mode=0777,dir_mode=0777,nofail 0 0
+//nas1/Library /mnt/nas/Library cifs ,cache=loose,credentials=/home/shiv/.smbcredentials,vers=3.0,uid=1000,gid=1000,file_mode=0777,dir_mode=0777,nofail 0 0
+//nas2/Projects /mnt/nas/Projects cifs ,cache=loose,credentials=/home/shiv/.smbcredentials,vers=3.0,uid=1000,gid=1000,file_mode=0777,dir_mode=0777,nofail 0 0
+//nas2/Resources /mnt/nas/Resources cifs ,cache=loose,credentials=/home/shiv/.smbcredentials,vers=3.0,uid=1000,gid=1000,file_mode=0777,dir_mode=0777,nofail 0 0

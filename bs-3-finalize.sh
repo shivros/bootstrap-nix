@@ -19,17 +19,17 @@ rm -f ~/.age/github.token 2>/dev/null || true
 
 # Set the remote URLs for the repositories
 echo "Fixing remote URLs for the repositories to use SSH..."
-git -C ~/.config/chezmoi remote set-url origin git@github.com:matt-fff/.chezmoi.git
-git -C ~/.local/share/chezmoi remote set-url origin git@github.com:matt-fff/chez-home.git
-git -C ~/Workspaces/matt-fff/bootstrap-nix remote set-url origin git@github.com:matt-fff/bootstrap-nix.git
+git -C ~/.config/chezmoi remote set-url origin git@github.com:shivros/.chezmoi.git
+git -C ~/.local/share/chezmoi remote set-url origin git@github.com:shivros/chez-home.git
+git -C ~/Workspaces/shivros/bootstrap-nix remote set-url origin git@github.com:shivros/bootstrap-nix.git
 
 echo "Cloning additional repositories..."
 
 # Clone workspaces repositories
 for repo in "deepthought" "cutter-templates" "datagrip"; do
-  target_dir="$HOME/Workspaces/matt-fff/$repo"
+  target_dir="$HOME/Workspaces/shivros/$repo"
   if [ ! -d "$target_dir" ]; then
-    git clone "git@github.com:matt-fff/$repo.git" "$target_dir"
+    git clone "git@github.com:shivros/$repo.git" "$target_dir"
   else
     echo "Directory already exists: $target_dir"
   fi

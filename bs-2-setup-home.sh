@@ -14,7 +14,7 @@ LINUX_TYPE="$(source ${SCRIPT_DIR}/get-os.sh)"
 
 # Create workspace directories
 echo "Creating workspace directories..."
-echo "oss matt-fff scratch" \
+echo "oss shivros scratch" \
   | sed 's/ /\n/g' \
   | xargs -I{} mkdir -p ~/Workspaces/{} || {
     echo "Error: Failed to create workspace directories" >&2
@@ -25,7 +25,7 @@ rm -rf ~/.config/chezmoi 2>/dev/null || true
 
 # Clone repositories
 echo "Cloning dotfiles repository..."
-git clone https://github.com/matt-fff/.chezmoi.git ~/.config/chezmoi || {
+git clone https://github.com/shivros/.chezmoi.git ~/.config/chezmoi || {
   echo "Error: Failed to clone chezmoi repository" >&2
   exit 1
 }
@@ -51,7 +51,7 @@ if [ ! -f ~/.age/chezmoi.txt ] || [ ! -f ~/.age/gh-token.encr ]; then
   # Only copy age key if it doesn't already exist
   if [ ! -f ~/.age/chezmoi.txt ]; then
     echo "Copying age key from donor system..."
-    scp "matt@${donor_hostname}:.age/chezmoi.txt" ~/.age/chezmoi.txt || {
+    scp "shiv@${donor_hostname}:.age/chezmoi.txt" ~/.age/chezmoi.txt || {
       echo "Error: Failed to copy age key from donor system" >&2
       exit 1
     }
@@ -62,7 +62,7 @@ if [ ! -f ~/.age/chezmoi.txt ] || [ ! -f ~/.age/gh-token.encr ]; then
   # Only copy gh token if it doesn't already exist
   if [ ! -f ~/.age/gh-token.encr ]; then
     echo "Copying GitHub token from donor system..."
-    scp "matt@${donor_hostname}:.age/gh-token.encr" ~/.age/gh-token.encr || {
+    scp "shiv@${donor_hostname}:.age/gh-token.encr" ~/.age/gh-token.encr || {
       echo "Error: Failed to copy GitHub token from donor system" >&2
       exit 1
     }
@@ -107,7 +107,7 @@ rm -f ~/.age/github.token 2>/dev/null || true
 
 rm -rf ~/.local/share/chezmoi 2>/dev/null || true
 
-GIT_CLONE_PROTECTION_ACTIVE=false gh repo clone matt-fff/chez-home ~/.local/share/chezmoi || {
+GIT_CLONE_PROTECTION_ACTIVE=false gh repo clone shivros/chez-home ~/.local/share/chezmoi || {
   echo "Error: Failed to clone chez-home repository" >&2
   exit 1
 }
