@@ -139,6 +139,9 @@ if [ "${LINUX_TYPE}" == "arch" ]; then
   #  gsettings set org.gnome.desktop.interface icon-theme gruvbox-dark-gtk
   #  gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
+  pnpm i -g pyright typescript-language-server eslint_d yaml-language-server vscode-langservers-extracted @openai/codex
+  rustup component add rust-analyzer
+
 fi
 
 cd "$SCRIPT_DIR" || {

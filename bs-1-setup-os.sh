@@ -232,6 +232,7 @@ if [ "${LINUX_TYPE}" == "arch" ]; then
     systemctl disable lightdm || true
     systemctl disable sddm || true
     systemctl disable gdm || true
+
     systemctl enable --now greetd
 
     systemctl enable --now docker
