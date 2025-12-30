@@ -116,7 +116,8 @@ if [ "${LINUX_TYPE}" == "arch" ]; then
     fzf \
     hyprland-autoname-workspaces-git \
     windsurf \
-    btop
+    btop \
+    mdformat-tables
 
   # xrdp \
   # gnome-remote-desktop \
@@ -139,8 +140,10 @@ if [ "${LINUX_TYPE}" == "arch" ]; then
   #  gsettings set org.gnome.desktop.interface icon-theme gruvbox-dark-gtk
   #  gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
-  pnpm i -g pyright typescript-language-server eslint_d yaml-language-server vscode-langservers-extracted @openai/codex typescript
+  pnpm i -g pyright typescript-language-server eslint_d yaml-language-server vscode-langservers-extracted @openai/codex typescript svelte-language-server
   rustup component add rust-analyzer
+
+  systemctl --user daemon-reload; systemctl --user enable --now syncthing.service
 
 fi
 
