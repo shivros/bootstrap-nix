@@ -117,7 +117,8 @@ if [ "${LINUX_TYPE}" == "arch" ]; then
     hyprland-autoname-workspaces-git \
     windsurf \
     btop \
-    mdformat-tables
+    mdformat-tables \ 
+    websocat
 
   # xrdp \
   # gnome-remote-desktop \
