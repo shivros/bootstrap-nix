@@ -228,6 +228,8 @@ if [ "${LINUX_TYPE}" == "arch" ]; then
     cp /etc/greetd/config.toml /etc/greetd/config.toml.bak || true
     rm /etc/greetd/config.toml || true
     cp "${SCRIPT_DIR}/arch/greetd.toml" /etc/greetd/config.toml || true
+    cp /etc/pam.d/greetd /etc/pam.d/greetd.bak || true
+    cp "${SCRIPT_DIR}/arch/greetd-pam" /etc/pam.d/greetd || true
 
     systemctl disable lightdm || true
     systemctl disable sddm || true
