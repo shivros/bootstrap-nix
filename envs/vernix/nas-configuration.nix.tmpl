@@ -1,0 +1,36 @@
+{ pkgs, ... }:
+
+{
+  fileSystems."/mnt/doomnas/Library" =
+    { device = "//nas1/Library";
+      fsType = "cifs";
+      options = let
+        # this line prevents hanging on network split
+        automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s,x-systemd.requires=network-online.target,_netdev,nofail";
+
+      in ["${automount_opts},cache=loose,credentials=/home/${NIXUSER}/.smbcredentials,vers=3.0,uid=1001,gid=100,file_mode=0777,dir_mode=0777,nofail"];
+      neededForBoot = false;
+    };
+
+  ## fileSystems."/mnt/doomnas/Resources" =
+  ##   { device = "//nas1/Resources";
+  ##     fsType = "cifs";
+  ##     options = let
+  ##       # this line prevents hanging on network split
+  ##       automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s,x-systemd.requires=network-online.target,_netdev,nofail";
+  ##
+  ##     in ["${automount_opts},cache=loose,credentials=/home/${NIXUSER}/.smbcredentials,vers=3.0,uid=1001,gid=100,file_mode=0777,dir_mode=0777,nofail"];
+  ##     neededForBoot = false;
+  ##   };
+
+  fileSystems."/mnt/doomnas/Projects" =
+    { device = "//nas2/Projects";
+      fsType = "cifs";
+      options = let
+        # this line prevents hanging on network split
+        automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s,x-systemd.requires=network-online.target,_netdev,nofail";
+
+      in ["${automount_opts},cache=loose,credentials=/home/${NIXUSER}/.smbcredentials,vers=3.0,uid=1001,gid=100,file_mode=0777,dir_mode=0777,nofail"];
+      neededForBoot = false;
+    };
+}

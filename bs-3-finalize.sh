@@ -12,8 +12,6 @@ fi
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 LINUX_TYPE="$(source ${SCRIPT_DIR}/get-os.sh)"
 
-mkdir -p ~/MEGA
-
 # Just in case it was left over from a previous run
 rm -f ~/.age/github.token 2>/dev/null || true
 
