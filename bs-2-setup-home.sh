@@ -51,7 +51,7 @@ if [ ! -f ~/.age/chezmoi.txt ] || [ ! -f ~/.age/gh-token.encr ]; then
   # Only copy age key if it doesn't already exist
   if [ ! -f ~/.age/chezmoi.txt ]; then
     echo "Copying age key from donor system..."
-    scp "shiv@${donor_hostname}:.age/chezmoi.txt" ~/.age/chezmoi.txt || {
+    scp "${USER}@${donor_hostname}:.age/chezmoi.txt" ~/.age/chezmoi.txt || {
       echo "Error: Failed to copy age key from donor system" >&2
       exit 1
     }
@@ -62,7 +62,7 @@ if [ ! -f ~/.age/chezmoi.txt ] || [ ! -f ~/.age/gh-token.encr ]; then
   # Only copy gh token if it doesn't already exist
   if [ ! -f ~/.age/gh-token.encr ]; then
     echo "Copying GitHub token from donor system..."
-    scp "shiv@${donor_hostname}:.age/gh-token.encr" ~/.age/gh-token.encr || {
+    scp "${USER}@${donor_hostname}:.age/gh-token.encr" ~/.age/gh-token.encr || {
       echo "Error: Failed to copy GitHub token from donor system" >&2
       exit 1
     }
